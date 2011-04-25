@@ -18,8 +18,10 @@
 
 <div id="header">
   <ul id="nav">
+	<% if logged_in? -%>
     <li><%= link_to I18n.t('txt.forums', :default => 'Forums'), root_path, :rel => 'home' %></li>
     <li><%= link_to I18n.t('txt.users', :default => 'Users'), users_path %></li>
+	<% end -%>
     <li id="search">
       <%= form_tag posts_path, :method => 'get' do -%>
         <%= text_field_tag :q, params[:q], :size => 15, :id => :search_box %>
