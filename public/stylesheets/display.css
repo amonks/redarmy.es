@@ -434,6 +434,10 @@ p
 	background-position: 40px;
 }
 
+.topic img {
+	width: 50%;
+}
+
 #header h1,
 #header h1 a
 {
