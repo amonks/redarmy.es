@@ -428,7 +428,7 @@ p
 }
 
 #header {
-	background-image: url(/public/images/star.png);
+	background-image: url("/public/images/star.png");
 	padding-left: 35px;
 }
 
