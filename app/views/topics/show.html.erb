@@ -1,6 +1,8 @@
 <% @page_title = @topic.title %>
 <% @monitoring = logged_in? && !Monitorship.count(:id, :conditions => ['user_id = ? and topic_id = ? and active = ?', current_user.id, @topic.id, true]).zero? %>
 
+<% if logged_in? %>
+
 <% content_for :right do -%>
 
 <h5><%= I18n.t 'txt.voices', :default => 'Voices' %></h5>
@@ -13,7 +15,6 @@
 
 <% end # right content -%>
 
-<% if logged_in? %>
 
 <%= form_tag monitorship_path(@forum, @topic), :style => 'margin-top:0em; float:right;' do -%>
 <div>
@@ -23,8 +24,6 @@
   <%= hidden_field_tag '_method', 'delete' if @monitoring %>
   <%= submit_tag :Set, :id => 'monitor_submit' %>
 </div>
-<% end -%>
-
 <% end -%>
 
 
@@ -173,3 +172,4 @@
   <%= link_to I18n.t('txt.forums', :default => 'Forums'), root_path %> <span class="arrow">&rarr;</span>
   <%= link_to h(@topic.forum.name), forum_path(@topic.forum) %> <span class="arrow">&rarr;</span>
 </div>
+<% end -%>
