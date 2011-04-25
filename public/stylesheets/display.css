@@ -429,6 +429,7 @@ p
 
 #header {
 	background-image: url("/images/star.png");
+	background-repeat: no-repeat;
 	padding-left: 35px;
 }
 
