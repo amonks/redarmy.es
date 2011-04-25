@@ -430,7 +430,7 @@ p
 #header {
 	background-image: url("/images/star.png");
 	background-repeat: no-repeat;
-	margin-left: 80px;
+	padding-left: 80px;
 	background-position: 40px;
 }
 
