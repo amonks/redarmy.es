@@ -435,6 +435,8 @@ p
 	color:#f00;
 	border:0;
 	text-decoration:none;
+	background-image: url(/public/images/star.png);
+	padding-left: 35px;
 }
 
 #header h1 .count
