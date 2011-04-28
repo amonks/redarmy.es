@@ -16,6 +16,7 @@
 <% end # right content -%>
 
 
+<% if false -%>
 <%= form_tag monitorship_path(@forum, @topic), :style => 'margin-top:0em; float:right;' do -%>
 <div>
   <input id="monitor_checkbox" type="checkbox" <%= "checked='checked'" if @monitoring %> 
@@ -24,6 +25,7 @@
   <%= hidden_field_tag '_method', 'delete' if @monitoring %>
   <%= submit_tag :Set, :id => 'monitor_submit' %>
 </div>
+<% end -%>
 <% end -%>
 
 
