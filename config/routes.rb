@@ -32,10 +32,9 @@ AlteredBeast::Application.routes.draw do
   match '/login' => 'sessions#new', :as => 'login'
   match '/logout' => 'sessions#destroy', :as => 'logout'
 
-  match '/dex' => 'forums#show', :name => "The Red Army"
 
   resource  :session
   
   
-  root :to => 'forums#index'
+  root :to => redirect("/forums/the-red-army")
 end
