@@ -32,7 +32,10 @@ AlteredBeast::Application.routes.draw do
   match '/login' => 'sessions#new', :as => 'login'
   match '/logout' => 'sessions#destroy', :as => 'logout'
 
+  match '/dex' => 'forums#index', :id => 2
+
   resource  :session
+  
   
   root :to => 'forums#index'
 end
