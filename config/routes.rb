@@ -32,7 +32,7 @@ AlteredBeast::Application.routes.draw do
   match '/login' => 'sessions#new', :as => 'login'
   match '/logout' => 'sessions#destroy', :as => 'logout'
 
-  match '/dex' => 'forums#show', :id => 2
+  match '/dex' => 'forums#show', :name => "The Red Army"
 
   resource  :session
   
