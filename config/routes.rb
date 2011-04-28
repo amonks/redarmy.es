@@ -33,6 +33,7 @@ AlteredBeast::Application.routes.draw do
   match '/logout' => 'sessions#destroy', :as => 'logout'
 
   resource  :session
-
-  root :to => 'forums#index'
+  
+  @forum = Forum.first
+  root :to => '@forum#show'
 end
