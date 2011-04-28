@@ -34,5 +34,6 @@ AlteredBeast::Application.routes.draw do
 
   resource  :session
   
-  root :to => 'forums/the-red-army'
+  @forum = Forum.first
+  root :to => 'forums#index'
 end
