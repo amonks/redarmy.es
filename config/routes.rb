@@ -35,5 +35,5 @@ AlteredBeast::Application.routes.draw do
   resource  :session
   
   @forum = Forum.first
-  root :to => 'forums#show', :id => 2
+  root :to => 'forums#show', :id => 1
 end
