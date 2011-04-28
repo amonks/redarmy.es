@@ -37,6 +37,9 @@
 <% if @topics.total_entries -%>
 <% if logged_in? %>
 <p style="float:right; margin-top:0;"><%= link_to I18n.t('txt.new_topic', :default => 'New topic'), new_forum_topic_path(@forum), :class => "utility" %></p>
+<p>
+  <%= link_to I18n.t('txt.show_recent_posts', :default => 'Show recent posts'), posts_path %>
+</p>
 <% end %>
 <%= will_paginate @topics %>
 <% end -%>
